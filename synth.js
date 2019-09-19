@@ -7,13 +7,14 @@ function preload(){
 	bassSynth = new Tone.MembraneSynth().toMaster()
 
 	loopBeat = new Tone.Loop(song, '4n')
+	Tone.Transport.bpm.value = 180
+	Tone.Transport.start()
+	loopBeat.start(0)
 
 }
 
 function setup() {
-	Tone.Transport.bpm.value = 180
-	Tone.Transport.start()
-	loopBeat.start(0)
+
 }
 
 function song(time){
